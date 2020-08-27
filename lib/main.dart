@@ -42,14 +42,15 @@ class _MyAppState extends State<MyApp> {
         maxImages: 1,
         enableCamera: true,
         selectedAssets: images,
-        cupertinoOptions: CupertinoOptions(takePhotoIcon: "chat"),
+        cupertinoOptions: CupertinoOptions(
+            takePhotoIcon: "chat", autoCloseOnSelectionLimit: true),
         materialOptions: MaterialOptions(
-          actionBarColor: "#abcdef",
-          actionBarTitle: "Example App",
-          allViewTitle: "All Photos",
-          useDetailsView: false,
-          selectCircleStrokeColor: "#000000",
-        ),
+            actionBarColor: "#abcdef",
+            actionBarTitle: "Example App",
+            allViewTitle: "All Photos",
+            useDetailsView: false,
+            selectCircleStrokeColor: "#000000",
+            autoCloseOnSelectionLimit: true),
       );
     } on Exception catch (e) {
       error = e.toString();
